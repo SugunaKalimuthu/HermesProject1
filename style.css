@@ -1,0 +1,522 @@
+/* style.css */
+
+/* Google Colors */
+:root {
+  --google-blue: #4285F4;
+  --google-red: #DB4437;
+  --google-yellow: #F4B400;
+  --google-green: #0F9D58;
+}
+
+a{
+  text-decoration: none;
+}
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 1; /* Added to ensure header content is above slider */
+  height: 400px;
+  text-align: center;
+  display: flex; /* Make header a flex container */
+  flex-direction: column; /* Stack logo and nav vertically */
+  justify-content: center; /* Vertically center content */
+  align-items: center; /* Horizontally center content */
+  text-align: center; /* Ensure text inside is also centered */
+  margin-bottom: 40px;
+}
+
+/* Header Slider Styles */
+.header-slider-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Place slider behind header content */
+  height: 100%;
+}
+
+.phone-symbol {
+  display: none; /* Hide on desktop by default */
+}
+
+.menu-button {
+  display: none; /* Hide on desktop by default */
+}
+
+.mobile-nav {
+  display: none; /* Hide on desktop by default */
+}
+
+.header-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: none;
+  height: 100%;
+}
+
+.header-slide:first-child {
+  display: block;
+}
+
+.header-slider-prev, .header-slider-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.header-slider-prev {
+  left: 10px;
+}
+
+.header-slider-next {
+  right: 10px;
+}
+
+/* Header Content Styles */
+.header h1, .header nav {
+  position: relative; /* Ensure content stays on top */
+  z-index: 2; /* Higher z-index than slider */
+  padding: 5px; /* Add padding for spacing */
+  color: var(--google-red);
+  font-size: large;
+  text-align: center;
+}
+
+.header nav {
+  background: none; /* Remove background color */
+}
+
+.header nav a {
+  color: var(--google-blue); /* Apply green to navigation links */
+  text-decoration: none; /* Remove underlines from links */
+  margin: 0 10px; /* Add spacing between links */
+  font-weight: bold;
+}
+
+.header nav a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: 80%;
+  margin: 20px auto;
+  position: relative;
+  z-index: 1;
+}
+
+.intro {
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+}
+
+.intro-image-container {
+  width: 30%; /* Adjust as needed */
+  margin-right: 20px; /* Add space between image and text */
+}
+
+.intro-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.intro-text {
+  width: 70%; /* Adjust as needed */
+}
+
+.intro-text h2 {
+  margin-bottom: 10px;
+}
+
+.sponsors {
+  text-align: center;
+  margin: 20px;
+  padding: 50px;
+  height: auto;
+}
+
+.sponsors img {
+  width: 80px; /* Reduced logo size */
+  margin: 10px;
+  height: auto; /* Maintain aspect ratio */
+}
+
+.sponsors img {
+  height: auto;
+}
+
+.contact-form {
+  margin-bottom: 20px;
+}
+
+
+.footer {
+  background-color: #f0f0f0;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between; 
+  flex-wrap: wrap;
+  align-items: flex-start; 
+  position: relative; /* Add position relative for absolute positioning of .footer-bottom */
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px;
+  box-sizing: border-box; 
+  color: var(--google-red);
+}
+
+
+.footer-section:first-child { 
+  flex-basis: 35%; 
+}
+
+.footer-section:nth-child(2) { 
+  flex-basis: 25%; 
+  text-align: left; 
+}
+
+.footer-section:last-child { 
+  flex-basis: 30%; 
+  text-align: left;
+  word-wrap: break-word; 
+  overflow-wrap: break-word;
+}
+
+.footer-section h2 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.footer-section p {
+  font-size: medium;
+  margin-bottom: 5px;
+}
+
+.footer-section a {
+  color: var(--google-red);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.9em; 
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+
+.footer-section form label {
+  margin-bottom: 1px;
+  font-size: 0.9em;
+}
+
+.footer-section form input,
+.footer-section form textarea {
+  width: 60%;
+  padding: 2px;
+  margin-bottom: 3px;
+  font-size: 0.9em;
+  box-sizing: border-box; 
+}
+
+.footer-section form textarea {
+  height: 40px; 
+}
+
+.footer-section form input[type="submit"] {
+  padding: 3px 6px;
+  font-size: 1em; 
+  align-self: flex-start;
+  background-color: var(--google-blue);
+}
+
+.footer-bottom {
+  text-align: left; /* Align text to the left */
+  padding: 10px 20px; /* Add padding to left and right */
+  font-size: 0.8em; /* Adjust font size */
+  color: #FFFFFF; /* White text color */
+  background-color: #DB4437; /* Red background color */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Services Page Styles */
+.services-container {
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+}
+
+.page-title {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  text-align: left;
+  margin-top: 40px;
+}
+
+.feature:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+
+.feature-image {
+  width: 250px;
+  height: 250px;
+  margin-right: 20px;
+  overflow: hidden;
+}
+
+.feature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.feature-content {
+  flex: 1;
+}
+
+.feature-content h3 {
+  margin-bottom: 5px;
+}
+
+/* Contact Page Styles (Specific Alignment) */
+.contact-page-container {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Adjust column ratio */
+  grid-gap: 20px;
+}
+
+.contact-info {
+  grid-column: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Increase gap for visual separation */
+}
+
+.contact-phone, .contact-email {
+  display: flex;
+  align-items: center;
+  padding: 10px; /* Add padding around phone/email boxes */
+}
+
+.contact-phone img, .contact-email img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border: none;
+}
+
+.contact-form-section {
+  grid-column: 1 / 2;
+  padding: 20px; /* Add padding around form section */
+  border: 1px solid #ccc; /* Add border for form section */
+  border-radius: 5px; /* Add rounded corners */
+}
+
+.contact-form-section form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-form-section form input,
+.contact-form-section form textarea {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.google-map {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  text-align: center;
+}
+
+.google-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px; /* Add rounded corners */
+}
+
+@media (max-width: 768px) {
+  .container {
+      width: 100%;
+      padding: 10px;
+  }
+
+  /* Header/Navigation */
+  .header {
+      height: auto;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+      text-align: center;
+  }
+
+  .header-slider-container {
+      height: 300px;
+  }
+
+ header h1 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+  }
+
+  .desktop-nav {
+      display: none; /* Hide desktop nav on mobile */
+  }
+
+  .phone-symbol {
+      display: block;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 1.5em;
+      z-index: 10;
+  }
+
+  .menu-button {
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: none;
+      border: none;
+      font-size: 1.5em;
+      cursor: pointer;
+      z-index: 10;
+  }
+
+  .mobile-nav {
+      display: none; /* Initially hidden */
+      width: 100%;
+      background: none;
+      padding: 10px;
+      box-sizing: border-box;
+  }
+
+  .mobile-nav a {
+      display: block;
+      margin: 5px 0;
+  }
+
+  /* Image Handling */
+  .intro-image-container,
+  .feature-image {
+      width: 100%;
+      height: auto;
+      margin-right: 0;
+      margin-bottom: 10px;
+  }
+
+  .intro-image-container img,
+  .feature-image img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+  }
+
+  /* Sponsors Section */
+  .sponsors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .sponsors h2 {
+    width: 100%;
+  }
+
+  .sponsors img {
+    width: calc(33.33% - 10px); /* Adjusted width and margin */
+    margin: 5px; /* Further reduced margin */
+    box-sizing: border-box;
+    max-width: 80px; /* Reduced max width */
+    height: auto;
+  }
+
+  .footer {
+    flex-direction: column;
+}
+
+  .footer-section {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .footer-section form input,
+  .footer-section form textarea {
+      width: 100%;
+  }
+
+  /* Services Page */
+  .services-container {
+      grid-template-columns: 1fr;
+  }
+
+  .feature {
+      flex-direction: column;
+      align-items: stretch;
+  }
+
+  /* Contact Page */
+  .contact-page-container {
+      grid-template-columns: 1fr;
+  }
+
+  .google-map {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+  }
+
+
+    .intro,
+    .sponsors,
+    .footer {
+      flex-direction: column;
+      align-items: center; /* Center items horizontally */
+      text-align: center; /* Center text within sections */
+    }
+
+    .footer-bottom {
+      font-size: 0.7em; /* Adjust font size for mobile */
+      padding: 10px; /* Adjust padding for mobile */
+    
+  }
+
+}
