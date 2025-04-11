@@ -48,14 +48,12 @@
       <div class="footer-section">
         <h2>Contact Form</h2>
         <br>
-        <form id="footerContactForm">
-            <label for="footerFullName">Full Name:</label><br>
-            <input type="text" id="footerFullName" name="footerFullName"><br><br>
-            <label for="footerEmail">Email:</label><br>
-            <input type="email" id="footerEmail" name="footerEmail"><br><br>
-            <label for="footerMessage">Message:</label><br>
-            <textarea id="footerMessage" name="footerMessage"></textarea><br><br>
-            <input type="submit" value="Submit">
+        <form  id="footercontactform" action="submit.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required><br>
+            <input type="email" name="email" placeholder="Your Email" required><br>
+            <textarea name="message" placeholder="Your Message" required></textarea><br>
+            <input type="hidden" name="gclid" id="gclid_field" value="">
+            <button type="submit">Send</button>
         </form>
     </div>
 
@@ -67,15 +65,14 @@
     <div class="footer-section">
         <h2>Contact Form</h2>
         <br>
-        <form id="footerContactForm">
-            <label for="footerFullName">Full Name:</label><br>
-            <input type="text" id="footerFullName" name="footerFullName"><br><br>
-            <label for="footerEmail">Email:</label><br>
-            <input type="email" id="footerEmail" name="footerEmail"><br><br>
-            <label for="footerMessage">Message:</label><br>
-            <textarea id="footerMessage" name="footerMessage"></textarea><br><br>
-            <input type="submit" value="Submit">
-        </form>
+            <form  id="footercontactform" action="submit.php" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required><br>
+                <input type="email" name="email" placeholder="Your Email" required><br>
+                <textarea name="message" placeholder="Your Message" required></textarea><br>
+                <input type="hidden" name="gclid" id="gclid_field" value="">
+                <button type="submit">Send</button>
+            </form>
+        
     </div>
     <div class="footer-section">
         <h2>Sitemap</h2>
